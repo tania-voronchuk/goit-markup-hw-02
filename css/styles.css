@@ -4,6 +4,7 @@
     --hero-title-text-color: #FFFFFF; 
     --accent-color: #2196F3;
     --primery-background-color: #FFFFFF; 
+    --secondary-background-color: #2F303A;
 }
 
 body {
@@ -17,6 +18,33 @@ body {
     font-display: swap;
 }
 
+/* section */
+
+.section {
+   padding-top: 94px;
+   padding-bottom: 94px;
+}
+
+/* class container */
+
+.container {
+     margin-left: auto;
+     margin-right: auto;
+     width: 1200px;
+     padding-left: 15px;
+     padding-right: 15px;
+}
+
+/* class container-header */
+
+.container-header {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+
 /* list style*/
 
 a {
@@ -25,6 +53,14 @@ a {
 
 ul {
     list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 /* logo */
@@ -37,6 +73,10 @@ ul {
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-right: 93px;
 } 
 
 .span-black {
@@ -46,7 +86,15 @@ ul {
     color: #FFFFFF
 }
 
- /* site nav */
+ /* site nav */  
+
+ .site-nav {
+    display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
 
 .site-nav .link {
     color: var(--title-text-color);
@@ -54,6 +102,11 @@ ul {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 0;
 }
 
 .site-nav .link:hover,
@@ -63,12 +116,25 @@ ul {
 
 /* auth nav */
 
+.auth-nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.auth-nav .item + .item {
+    margin-left: 50px;
+}
+
 .auth-nav .link {
     color: var(--primery-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus {
@@ -77,16 +143,47 @@ ul {
 
 /* hero */
 
+.section-hero {
+    background-color: var(--secondary-background-color);
+}
+
+.container-hero {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
 .hero-title {
     color: var(--hero-title-text-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
-    background-color: #2F303A;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 237px;
+    padding-right: 237px;
 }
 
-/* section */
+/* section-feature */
+
+.feature {
+    width: 270px;
+}
+
+.list-feature {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc(100% / 4 - 30px);
+}
+
+.feature:not(:last-child) {
+    margin-right: 30px;
+}
 
 h2 {
     color: var(--title-text-color);
@@ -94,17 +191,72 @@ h2 {
     font-size: 36px;
     line-height: 1.17;
     letter-spacing: 0.03em;
+
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.title {
+.feature-title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
+.feature-text {
+    margin-top: 10px;
+    margin-bottom: 0;
+} 
+
+/* section-work */
+
+.container-work {
+    text-align: center;
+    padding-top: 0;
+}
+
+.list-work {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    padding-top: 50px;
+}
+
+.work {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-right: 30px;
+} 
+
 /* section-team */
+
+.section-team {
+    background-color: #F5F4FA;
+} 
+
+.container-team {
+    text-align: center;
+} 
+
+.list-team {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-right: -30px;
+} 
+
+.team {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-right: 30px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    background-color: var(--primery-background-color);
+}  
 
 .team-title {
     color: var(--title-text-color);
@@ -112,12 +264,18 @@ h2 {
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .team-text {
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 /* section-portfolio */
@@ -128,12 +286,38 @@ h2 {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+
+    margin-top: 0;
+    margin-bottom: 4px;
 }
 
 .portfolio {
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
+
+    margin: 0;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+}
+
+.portfolio-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio-card {
+    padding-left: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #EEEEEE;
+    border-top: none; 
 }
 
 /* button */
@@ -147,7 +331,14 @@ h2 {
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.06em;
+
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+    margin-top: 30px;
+    border-color: var(--accent-color);
 }   
+
 .button {
     color: var(--title-text-color);
     cursor: pointer; 
@@ -156,13 +347,43 @@ h2 {
     font-size: 16px;
     line-height: 1.6;  
     letter-spacing: 0.03em;
+    background-color: rgba(245, 244, 250, 1);
+
+    border-style: none;
+    padding: 6px 22px;
+    min-width: 73px;
 }
 .button:hover,
 .button:focus {
     background-color: var(--accent-color);
 }
 
+.button-list {
+    display: flex;
+    margin-right: -9px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.button-item:not(:last-child) {
+    margin-right: 9px;
+}
+
+.button-item {
+    border-radius: 4px;
+}
+
 /* footer contacts */
+
+.footer-section {
+    background-color: var(--secondary-background-color);
+}
+
+
+.footer {  
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 address {
     font-style: normal;
@@ -174,8 +395,13 @@ address {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    background-color: #2F303A;
+
+    margin-top: 20px;
 }
 .address-communication {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.address-list  {
+    margin-top: 9px;
 }
